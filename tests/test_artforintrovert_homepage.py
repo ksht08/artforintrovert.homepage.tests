@@ -24,6 +24,9 @@ def test_artforintrovert_homepage():
             "По подписке за 300 рублей в месяц."
             )
 
+    with allure.step("Close ad banner"):
+        home_page.close_ad_banner()
+
     with allure.step("Accept cookies"):
         with allure.step("Cookies banner screenshot"):
             allure.attach(

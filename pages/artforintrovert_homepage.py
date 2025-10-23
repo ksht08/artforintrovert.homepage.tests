@@ -28,6 +28,17 @@ class HomePage():
 
         return self
 
+    def close_ad_banner(self):
+        """
+        Close ad banner if present, skip if not
+        """
+        ad_banner = browser.element(".tn-elem__13446184011728998947890")
+        if ad_banner.matching(be.visible):
+            ad_banner.click()
+            return True
+        return False
+
+
     def consent_to_cookies(self):
         """
         Accept cookies by clicking the consent button on the cookie banner
